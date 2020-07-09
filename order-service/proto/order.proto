@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+service Order{
+    rpc CreateOrder(CreateOrderRequest) returns (CommonResult) {}
+}
+
+message CreateOrderRequest{
+    string OrderId = 1;
+    string OrderName = 2;
+}
+
+message CommonResult{
+    string code = 1;
+    string info = 2;
+}
